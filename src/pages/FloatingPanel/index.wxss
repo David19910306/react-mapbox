@@ -1,0 +1,7 @@
+.floating-panel .adm-floating-panel-header {
+  height: 20px;
+}
+.floating-panel .search-bar {
+  width: 95%;
+  margin: 0 auto;
+}
