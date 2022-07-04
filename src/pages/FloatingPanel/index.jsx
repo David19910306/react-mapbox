@@ -11,7 +11,7 @@ export default class Floating extends Component{
 
   render(){ 
     return (
-      <FloatingPanel className="floating-panel" anchors={[65, window.innerHeight * 0.3, window.innerHeight * 0.9]}>
+      <FloatingPanel className="floating-panel" anchors={[65, window.innerHeight * 0.3, window.innerHeight * 0.85]}>
         <SearchBar className="search-bar" placeholder="搜索地点或地址"></SearchBar>
       </FloatingPanel>
     )
