@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import {Map, accessToken} from 'mapbox-gl'
 import Pulsing from "@/js/plushingDot";
+import IconFont from "@/components/iconfont";
+
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import './index.less'
 
 export default class MapBox extends Component{
@@ -15,7 +18,7 @@ export default class MapBox extends Component{
     const mapbox = new Map({
       container: 'mapbox',
       style: 'mapbox://styles/davidtaiii/cl54005wc000r15pjrnkokyf0',
-      center: [114.028, 22.568],
+      center: [114.02728, 22.5675],
       zoom: 15
     })
     // 标注我的位置
@@ -40,6 +43,11 @@ export default class MapBox extends Component{
   }
 
   render(){
-    return <div id="mapbox" className="map-box"></div>
+    return <div id="mapbox" className="map-box">
+      <section className="layer-control">
+        <IconFont render={() => <i className="iconfont icon-map" style={{color: '#666'}}></i>} />
+        <IconFont render={() => <i className="iconfont icon-location" style={{color: '#666'}}></i>} />
+      </section>
+    </div>
   }
 }

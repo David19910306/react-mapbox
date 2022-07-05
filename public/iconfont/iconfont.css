@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3501716 */
+  src: url('iconfont.woff2?t=1657008402726') format('woff2'),
+      url('iconfont.woff?t=1657008402726') format('woff'),
+      url('iconfont.ttf?t=1657008402726') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-earth:before {
+  content: "\e6de";
+}
+
+.icon-map:before {
+  content: "\e77b";
+}
+
+.icon-car-fill:before {
+  content: "\e86f";
+}
+
+.icon-subway:before {
+  content: "\e838";
+}
+
+.icon-location:before {
+  content: "\e67c";
+}
+

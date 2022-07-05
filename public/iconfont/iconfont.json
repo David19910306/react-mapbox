@@ -1,0 +1,44 @@
+{
+  "id": "3501716",
+  "name": "react-mapbox",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "400697",
+      "name": "earth",
+      "font_class": "earth",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "837055",
+      "name": "map",
+      "font_class": "map",
+      "unicode": "e77b",
+      "unicode_decimal": 59259
+    },
+    {
+      "icon_id": "4936691",
+      "name": "car-fill",
+      "font_class": "car-fill",
+      "unicode": "e86f",
+      "unicode_decimal": 59503
+    },
+    {
+      "icon_id": "8953248",
+      "name": "subway",
+      "font_class": "subway",
+      "unicode": "e838",
+      "unicode_decimal": 59448
+    },
+    {
+      "icon_id": "14679134",
+      "name": "location",
+      "font_class": "location",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    }
+  ]
+}
