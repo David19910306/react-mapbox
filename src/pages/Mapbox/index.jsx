@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Map, accessToken} from 'mapbox-gl'
-
+import Pulsing from "@/js/plushingDot";
 import './index.less'
 
 export default class MapBox extends Component{
@@ -17,11 +17,25 @@ export default class MapBox extends Component{
       style: 'mapbox://styles/davidtaiii/cl54005wc000r15pjrnkokyf0',
       center: [114.028, 22.568],
       zoom: 15
-      // projection: 'equirectangular'
     })
     // 标注我的位置
     mapbox.on("load", function(){
-      console.log('load')
+      // console.log(mapbox.getCenter())
+      mapbox.addImage('pulsing', new Pulsing(100, mapbox), {pixelRatio: 2})
+      mapbox.addLayer({
+        id: 'points',  // 图层id，自定义
+        type: 'symbol',  // 图层类型symbol代表icon图标或者是字体标注
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: [{type: 'Feature', geometry: {type: 'Point', coordinates: mapbox.getCenter().toArray()}}]
+          }
+        },
+        layout: {
+          'icon-image': 'pulsing'
+        }
+      })
     })
   }
 
