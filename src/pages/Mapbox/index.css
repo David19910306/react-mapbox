@@ -8,3 +8,29 @@
   right: 1rem;
   border-radius: 0.3rem;
 }
+.map-box .layer-panel {
+  height: 15.85rem;
+  width: 100%;
+  background-color: deeppink;
+  position: absolute;
+  border-radius: 0.5rem;
+  bottom: -1rem;
+  z-index: 999;
+  animation: transformUp 1s ease-in-out;
+}
+@keyframes transformUp {
+  from {
+    transform: translateY(15.85rem);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes transformDown {
+  to {
+    transform: translateY(15.85rem);
+  }
+  from {
+    transform: translate(0);
+  }
+}

@@ -9,12 +9,7 @@ export default class IconFont extends Component{
 
   // 按钮点击, currentTarget是绑定事件的元素，target是触发事件的元素
   onClickHandler(event){
-    switch(event.target.className){
-      case 'iconfont icon-map':
-        console.log('pp'); break
-      case 'iconfont icon-location':
-        console.log('oo'); break
-    }
+    this.props.onClickHandler(event.target.className)
   }
 
   render(){
