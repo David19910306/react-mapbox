@@ -16,7 +16,14 @@
   border-radius: 0.5rem;
   bottom: -1rem;
   z-index: 999;
+}
+.map-box .Up {
   animation: transformUp 1s ease-in-out;
+  transform: translateY(0);
+}
+.map-box .Down {
+  animation: transformDown 1s ease-in-out;
+  transform: translateY(15.85rem);
 }
 @keyframes transformUp {
   from {

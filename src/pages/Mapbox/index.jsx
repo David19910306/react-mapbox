@@ -38,8 +38,11 @@ export default class MapBox extends Component{
         <IconFont onClickHandler={this.onClickHandler} render={() => <i className="iconfont icon-map" style={{color: '#666'}}></i>} />
         <IconFont onClickHandler={this.onClickHandler} render={() => <i className="iconfont icon-location" style={{color: '#666'}}></i>} />
       </section>
-      {currentClick.includes('icon-map') && 
-        <section className="layer-panel"></section>}
+      {
+        currentClick !== ''? currentClick.includes('icon-map')? 
+          <section className="layer-panel Up"></section>: 
+          <section className="layer-panel Down"></section>: <></>
+      }
     </div>
   }
 }
