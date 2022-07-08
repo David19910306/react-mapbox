@@ -11,11 +11,25 @@
 .map-box .layer-panel {
   height: 15.85rem;
   width: 100%;
-  background-color: deeppink;
+  background-color: #f6f6f6;
   position: absolute;
   border-radius: 0.5rem;
   bottom: -1rem;
   z-index: 999;
+  padding: 0.5rem;
+}
+.map-box .layer-panel .map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.map-box .layer-panel .map-header .choose-map {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.map-box .layer-panel .map-container {
+  padding: 0.3rem;
+  background-color: deeppink;
 }
 .map-box .Up {
   animation: transformUp 1s ease-in-out;

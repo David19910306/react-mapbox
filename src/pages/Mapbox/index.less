@@ -10,12 +10,25 @@
   .layer-panel{
     height: 15.85rem;
     width: 100%;
-    background-color: deeppink;
+    background-color: #f6f6f6;
     position: absolute;
     border-radius: .5rem;
     bottom: -1rem;
     z-index: 999;
-    // transform: translateY(15.85rem);
+    padding: .5rem;
+    .map-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .choose-map{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+    .map-container{
+      padding: .3rem;
+      background-color: deeppink;
+    }
   }
   .Up{
     animation: transformUp 1s ease-in-out;

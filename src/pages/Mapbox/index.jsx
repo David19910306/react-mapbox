@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Map, accessToken} from 'mapbox-gl';
+import { CloseCircleFill } from 'antd-mobile-icons'
 import layers from "@/js/layers";
 import IconFont from "@/components/iconfont";
 
@@ -39,9 +40,16 @@ export default class MapBox extends Component{
         <IconFont onClickHandler={this.onClickHandler} render={() => <i className="iconfont icon-location" style={{color: '#666'}}></i>} />
       </section>
       {
-        currentClick !== ''? currentClick.includes('icon-map')? 
-          <section className="layer-panel Up"></section>: 
-          <section className="layer-panel Down"></section>: <></>
+        currentClick !== ''?
+          <section className={`${currentClick.includes('icon-map')? "layer-panel Up": "layer-panel Down"}`}>
+            <header className="map-header">
+              <span className="choose-map">选取地图</span>
+              <CloseCircleFill fontSize={24} color='var(--adm-color-weak)' onClick={() => {this.setState({currentClick: 'iconfont'})}} />
+            </header>
+            <section className="map-container">
+              
+            </section>
+          </section>: <></>
       }
     </div>
   }
